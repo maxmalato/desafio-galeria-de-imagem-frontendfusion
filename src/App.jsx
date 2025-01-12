@@ -1,13 +1,13 @@
-
 import './App.css'
-
+import Header from './components/Header';
+import PhotosList from './components/PhotosList';
 function App() {
 
   return (
     <>
       <main>
-        <h1>Seja bem vindo! :)</h1>
-        <p>Desafio de Galeria de Imagens - Processo Seletivo Frontend Fusion</p>
+        <Header/>
+        <PhotosList/>
       </main>
     </>
   );
