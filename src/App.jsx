@@ -1,10 +1,9 @@
 import './App.css'
 
-import Footer from './components/Footer';
-import Header from './components/Header';
 import LogoFavorite from './components/LogoFavorite';
 import PhotosList from './components/PhotosList';
 import PhotoFavorites from './components/PhotoFavorites';
+import PhotoDetails from './components/PhotoDetails';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -15,12 +14,11 @@ function App() {
       <main>
         <Router>
           <LogoFavorite />
-          <Header />
           <Routes>
             <Route path='/' element={<PhotosList />} />
             <Route path='/favorites' element={<PhotoFavorites />} />
+            <Route path='/details/:id' element={<PhotoDetails />} />
           </Routes>
-          <Footer />
         </Router>
       </main>
     </>
