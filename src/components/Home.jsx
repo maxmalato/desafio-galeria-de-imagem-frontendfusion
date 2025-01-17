@@ -63,7 +63,7 @@ const Home = () => {
                             className="border-2 border-b-slate-800 p-3 rounded-md flex flex-col items-center gap-3"
                             aria-labelledby={`photo-${item.id}`}
                         >
-                            <img loading="lazy" className="w-96 h-72 object-cover rounded-lg hover:animate-pulse" src={item.download_url} alt={`Foto do autor: ${item.author}`} />
+                            <img loading="lazy" className="w-96 h-72 object-cover rounded-lg" src={item.download_url} alt={`Foto do autor: ${item.author}`} />
                             <h2 className="font-semibold text-xl">{item.author}</h2>
                             <div className="flex justify-around w-full mt-4">
                                 <button aria-label={`Ver mais informações sobre a foto de ${item.author}`} role="button" onClick={() => handlePhotoDetails(item.id)} className="flex items-center gap-1 border px-3 py-1 rounded-md bg-slate-100 drop-shadow-md transition-colors hover:bg-slate-200">
