@@ -1,7 +1,7 @@
 import './App.css'
 
-import LogoFavorite from './components/LogoFavorite';
-import PhotosList from './components/PhotosList';
+import Header from './components/Header';
+import Home from './components/Home';
 import PhotoFavorites from './components/PhotoFavorites';
 import PhotoDetails from './components/PhotoDetails';
 
@@ -13,9 +13,9 @@ function App() {
     <>
       <main>
         <Router>
-          <LogoFavorite />
+          <Header />
           <Routes>
-            <Route path='/' element={<PhotosList />} />
+            <Route path='/' element={<Home />} />
             <Route path='/favorites' element={<PhotoFavorites />} />
             <Route path='/details/:id' element={<PhotoDetails />} />
           </Routes>

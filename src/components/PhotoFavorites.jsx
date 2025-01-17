@@ -12,10 +12,10 @@ const PhotoFavorites = () => {
     }
 
     return (
-        <div className="flex flex-col items-center gap-3 md:grid grid-cols-2 lg:grid-cols-3 my-4">
+        <main className="flex flex-col items-center gap-3 md:grid grid-cols-2 lg:grid-cols-3 my-4">
             {favoritePhotos.length > 0 ? (
                 favoritePhotos.map((photo) => (
-                    <div
+                    <article
                         key={photo.id}
                         className="border-2 border-b-slate-800 p-3 rounded-md flex flex-col items-center gap-3"
                     >
@@ -26,8 +26,8 @@ const PhotoFavorites = () => {
                             alt={`Foto do autor: ${photo.author}`}
                         />
                         <h1 className="font-semibold text-xl">{photo.author}</h1>
-                        <div className="flex gap-10 mt-4">
-                            <button onClick={() => handlePhotoDetails(photo.id)} className="flex items-center gap-1 border px-3 py-1 rounded-md bg-slate-100 drop-shadow-md transition-colors hover:bg-slate-200">
+                        <div className="flex justify-around w-full mt-4">
+                            <button onClick={() => handlePhotoDetails(photo.id)} className="flex items-center gap-1 border px-3 py-1 rounded-md bg-slate-100 drop-shadow-md transition-colors hover:bg-slate-200" aria-label={`Ver detalhes da foto de ${photo.author}`}>
                                 <i class='bx bxs-plus-circle bx-tada-hover bx-sm'></i>
                                 <p>Informações</p>
                             </button>
@@ -46,12 +46,12 @@ const PhotoFavorites = () => {
                                 )}
                             </button>
                         </div>
-                    </div>
+                    </article>
                 ))
             ) : (
-                <p className="font-semibold text-lg">Nenhuma foto foi adicionada aos favoritos.</p>
+                <p className="font-semibold text-lg">Nenhuma foto favorita.</p>
             )}
-        </div>
+        </main>
     )
 }
 

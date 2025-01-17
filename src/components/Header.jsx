@@ -1,16 +1,23 @@
-import Combobox from "./Combobox"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
-    return (
-        <header className="flex flex-col gap-2 md:items-center">
-            <div className="border-2 rounded-md p-2 flex justify-between items-center mt-5 max-w-3/4 md:w-96">
-                <input type="text" placeholder="Pesquisar imagem" className="outline-none w-full" />
-                <i className='bx bx-search bx-sm cursor-pointer'></i>
-            </div>
+    const navigate = useNavigate()
+    const handleToFavorites = () => navigate("/favorites")
+    const handleToPhotoList = () => navigate("/")
 
-            <div className="self-start">
-                <Combobox />
-            </div>
+    return (
+        <header className="flex justify-between sticky top-1 z-10 bg-white rounded-lg p-3 drop-shadow-lg" aria-label="Cabeçalho principal com navegação">
+            <nav className="flex justify-between w-full" aria-label="Navegação principal">
+                <button onClick={handleToPhotoList} className="flex items-center gap-2" aria-label="Ir para a galeria de fotos">
+                    <i class='bx bx-image bx-sm' aria-hidden="true"></i>
+                    <p className="font-semibo">GALLERY</p>
+                </button>
+
+                <button onClick={handleToFavorites} className="flex items-center gap-2" aria-label="Ir para a página de favoritos">
+                    <i class='bx bx-bookmark-heart bx-sm text-red-500' aria-hidden="true"></i>
+                    <p className="transition-colors hover:text-red-500">Favoritos</p>
+                </button>
+            </nav>
         </header>
     )
 }
