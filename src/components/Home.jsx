@@ -68,7 +68,7 @@ const Home = () => {
                             <div className="flex justify-around w-full mt-4">
                                 <button aria-label={`Ver mais informações sobre a foto de ${item.author}`} role="button" onClick={() => handlePhotoDetails(item.id)} className="flex items-center gap-1 border px-3 py-1 rounded-md bg-slate-100 drop-shadow-md transition-colors hover:bg-slate-200">
                                     <i class='bx bxs-plus-circle bx-tada-hover bx-sm'></i>
-                                    <p>Informações</p>
+                                    <p>Detalhes</p>
                                 </button>
 
                                 <button onClick={() => toggleFavorite(item.id)}>
