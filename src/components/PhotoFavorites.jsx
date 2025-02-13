@@ -29,7 +29,7 @@ const PhotoFavorites = () => {
                         <div className="flex justify-around w-full mt-4">
                             <button onClick={() => handlePhotoDetails(photo.id)} className="flex items-center gap-1 border px-3 py-1 rounded-md bg-slate-100 drop-shadow-md transition-colors hover:bg-slate-200" aria-label={`Ver detalhes da foto de ${photo.author}`}>
                                 <i class='bx bxs-plus-circle bx-tada-hover bx-sm'></i>
-                                <p>Informações</p>
+                                <p>Detalhes</p>
                             </button>
 
                             <button onClick={() => toggleFavorite(photo.id)}>
