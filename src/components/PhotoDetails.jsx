@@ -41,7 +41,7 @@ const PhotoDetails = () => {
 
     return (
         <main className="flex flex-col items-center mt-4 gap-3">
-            <img className="w-96 h-72 md:w-3/4 md:h-80 object-cover rounded-lg hover:animate-pulse" src={photoId.download_url} alt={`Foto do autor: ${photoId.author}`} />
+            <img  loading="lazy" className="w-96 h-72 md:w-3/4 md:h-80 object-cover rounded-lg hover:animate-pulse" src={photoId.download_url} alt={`Foto do autor: ${photoId.author}`} />
             <h1 className="font-semibold text-xl">{photoId.author}</h1>
             <div className="flex gap-4 border p-2 rounded-lg transition-colors hover:bg-slate-100" aria-label="Dimensões da imagem">
                 <p><span className="font-semibold">Largura: </span>{photoId.width}px</p>
